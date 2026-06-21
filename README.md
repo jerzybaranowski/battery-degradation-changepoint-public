@@ -4,7 +4,7 @@
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/release/python-3110/)
 [![License: MIT](https://img.shields.io/badge/Code%20license-MIT-yellow.svg)](LICENSE)
 [![Content: CC BY 4.0](https://img.shields.io/badge/Content%20license-CC%20BY%204.0-lightgrey.svg)](LICENSE-CONTENT.md)
-[![Preprint DOI](https://img.shields.io/badge/DOI-10.20944%2Fpreprints202509.2395.v2-blue.svg)](https://doi.org/10.20944/preprints202509.2395.v3)
+[![Preprint DOI](https://img.shields.io/badge/DOI-10.20944%2Fpreprints202509.2395.v3-blue.svg)](https://doi.org/10.20944/preprints202509.2395.v3)
 
 Paper title: *Hierarchical Bayesian Changepoint Analysis of Lithium-Ion
 Battery Degradation under Incomplete Cycle Observations*
@@ -128,7 +128,7 @@ If you use this replication package, cite the associated preprint:
 Anna Jarosz-Kozyro, Waldemar Bauer, and Jerzy Baranowski, *Hierarchical
 Bayesian Changepoint Analysis of Lithium-Ion Battery Degradation under
 Incomplete Cycle Observations*, Preprints.org, 2025.
-[https://doi.org/10.20944/preprints202509.2395.v2](https://doi.org/10.20944/preprints202509.2395.v3)
+[https://doi.org/10.20944/preprints202509.2395.v3](https://doi.org/10.20944/preprints202509.2395.v3)
 
 Machine-readable citation metadata are provided in `CITATION.cff`. Its archive
 DOI and release-version placeholders will be completed when a versioned archive
