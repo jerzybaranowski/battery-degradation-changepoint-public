@@ -25,6 +25,7 @@ PROHIBITED_NAMES = {
     "__pycache__",
     ".pytest_cache",
 }
+IGNORED_ROOT_NAMES = {".git"}
 ACTIVE_TABLES = {
     "battery_technology_context",
     "degradation_mechanisms_observability",
@@ -86,7 +87,13 @@ def validate_release(root: Path = PACKAGE_ROOT) -> dict[str, Any]:
         if actual != row["sha256"]:
             errors.append(f"Checksum mismatch: {row['package_path']}")
 
-    for path in root.rglob("*"):
+    release_paths = [
+        path
+        for path in root.rglob("*")
+        if path.relative_to(root).parts[0] not in IGNORED_ROOT_NAMES
+    ]
+
+    for path in release_paths:
         if path.name in PROHIBITED_NAMES:
             errors.append(f"Prohibited internal path included: {path.relative_to(root)}")
         if path.is_symlink():
@@ -103,7 +110,7 @@ def validate_release(root: Path = PACKAGE_ROOT) -> dict[str, Any]:
         "\\" + "Users" + "\\",
         "jerzy" + "baranowski" + "/" + "GitHub",
     )
-    for path in root.rglob("*"):
+    for path in release_paths:
         if not path.is_file() or path.suffix.lower() in {".pdf", ".png"}:
             continue
         try:

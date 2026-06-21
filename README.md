@@ -1,5 +1,11 @@
 # Manuscript figure replication package
 
+[![CI](https://github.com/jerzybaranowski/battery-degradation-changepoint-public/actions/workflows/ci.yml/badge.svg)](https://github.com/jerzybaranowski/battery-degradation-changepoint-public/actions/workflows/ci.yml)
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/release/python-3110/)
+[![License: MIT](https://img.shields.io/badge/Code%20license-MIT-yellow.svg)](LICENSE)
+[![Content: CC BY 4.0](https://img.shields.io/badge/Content%20license-CC%20BY%204.0-lightgrey.svg)](LICENSE-CONTENT.md)
+[![Preprint DOI](https://img.shields.io/badge/DOI-10.20944%2Fpreprints202509.2395.v2-blue.svg)](https://doi.org/10.20944/preprints202509.2395.v2)
+
 Paper title: *Hierarchical Bayesian Changepoint Analysis of Lithium-Ion
 Battery Degradation under Incomplete Cycle Observations*
 
