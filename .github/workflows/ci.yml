@@ -24,7 +24,7 @@ jobs:
 
     env:
       MPLBACKEND: Agg
-      MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
+      MPLCONFIGDIR: /tmp/matplotlib
       PYTHONHASHSEED: "0"
       PYTHONDONTWRITEBYTECODE: "1"
 
