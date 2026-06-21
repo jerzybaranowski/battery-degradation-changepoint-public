@@ -1,0 +1,56 @@
+schema_version: 1
+rendering:
+  png_dpi: 300
+  formats: [pdf, png]
+  backend: Agg
+figures:
+  fig_results_cd_trajectories:
+    width_in: 7.0
+    height_in: 8.5
+    panel_count: 18
+    style: publication-full-page.mplstyle
+  fig_results_transition_definitions:
+    width_in: 7.0
+    height_in: 5.2
+    panel_count: 2
+    style: publication-double-column.mplstyle
+  fig_results_h5_transition_midpoints:
+    width_in: 7.0
+    height_in: 5.6
+    panel_count: 1
+    style: publication-double-column.mplstyle
+  fig_results_h5_slope_acceleration:
+    width_in: 7.0
+    height_in: 5.4
+    panel_count: 2
+    style: publication-double-column.mplstyle
+  fig_results_h5_selected_fits:
+    width_in: 7.0
+    height_in: 5.8
+    panel_count: 4
+    style: publication-double-column.mplstyle
+  fig_results_h5_ppc:
+    width_in: 7.0
+    height_in: 6.0
+    panel_count: 4
+    style: publication-double-column.mplstyle
+  fig_results_random_thinning:
+    width_in: 7.0
+    height_in: 6.0
+    panel_count: 4
+    style: publication-double-column.mplstyle
+  fig_results_truncation_sensitivity:
+    width_in: 7.0
+    height_in: 6.0
+    panel_count: 4
+    style: publication-double-column.mplstyle
+  fig_results_post_transition_horizon:
+    width_in: 7.0
+    height_in: 4.2
+    panel_count: 2
+    style: publication-double-column.mplstyle
+  fig_results_battery11_truncation:
+    width_in: 7.0
+    height_in: 5.8
+    panel_count: 6
+    style: publication-double-column.mplstyle

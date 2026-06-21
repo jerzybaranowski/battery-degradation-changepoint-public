@@ -1,0 +1,11 @@
+{
+  "diagnostic_status": "passed",
+  "divergence_count": 0,
+  "failure_reasons": [],
+  "maximum_r_hat": 1.0,
+  "minimum_bulk_ess": 1723.0,
+  "minimum_e_bfmi": 0.9592863113106815,
+  "minimum_tail_ess": 2151.0,
+  "sampling_warning": false,
+  "treedepth_saturation_count": 0
+}

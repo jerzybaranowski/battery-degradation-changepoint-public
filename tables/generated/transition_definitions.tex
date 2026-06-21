@@ -1,0 +1,18 @@
+\begin{table}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\caption{Operational model roles and transition definitions. The reported locations are related but non-equivalent estimands.}
+\label{tab:transition-definitions}
+\centering
+\begin{tabularx}{\fulllength}{>{\raggedright\arraybackslash}p{0.07\fulllength}>{\raggedright\arraybackslash}p{0.18\fulllength}>{\raggedright\arraybackslash}p{0.32\fulllength}>{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Code} & \textbf{Observation structure} & \textbf{Model role and estimand} & \textbf{Uncertainty or stability assessment}\\
+\midrule
+B0 & 1,071 cycle medians & Constant-slope no-transition reference & No changepoint parameter\\
+D1 & 1,071 cycle medians & Sharp breakpoint joining two continuous linear regimes & Moving-block residual bootstrap\\
+S1 & 1,071 cycle medians & Interior cycle of maximum smoothing-spline curvature & Smoothing-ladder stability gate\\
+A1 & 1,071 cycle medians & Midpoint of an aggregate gradual slope transition & Bayesian posterior interval\\
+H5.1 & 14,848 battery--cycle rows & Battery-specific gradual-transition midpoints and draw-wise population summaries & Hierarchical Bayesian posterior intervals and boundary diagnostics\\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

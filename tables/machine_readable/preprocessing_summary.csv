@@ -1,0 +1,11 @@
+Quantity,Count,Share,Definition
+Source observations,"15,064",100.00%,All rows in the distributed file
+Cycle-index resets,13,---,Strict decreases in preserved source order
+Inferred battery records,14,---,One plus the cumulative reset count
+Candidate long-duration rows,184,1.22%,"Either duration >20,000 s"
+Candidate incomplete rows,32,0.21%,"Discharge <600 s or charge <3,000 s"
+Overlap of candidate flags,0,0.00%,Rows satisfying both candidate rules
+Regular-eligible rows,"14,848",98.57%,Neither candidate flag
+Complete regular aggregate,"1,121 cycles",---,Median C/D at every represented cycle
+Retained aggregate,"1,071 cycles",---,At least seven contributing batteries
+Excluded low-support aggregate,50 cycles,---,Fewer than seven contributing batteries

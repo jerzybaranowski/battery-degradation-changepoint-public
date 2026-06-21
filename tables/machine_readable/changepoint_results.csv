@@ -1,0 +1,5 @@
+Model,Transition estimand,"Location, cycles",Pre-slope,Post-slope,Status or additional result
+B0,No transition,---,0.003810,0.003810,Constant-slope reference
+D1,Sharp continuous breakpoint,"576.4 [531.5, 628.8]",0.002620,0.005148,Slope increment 0.002528
+A1,Smooth-transition midpoint,"503.0 [492.3, 512.9]",0.001343,0.005520,"Width 129.2 [112.7, 146.9] cycles; Pr(delta beta > 0 | y)=1"
+S1,Maximum-curvature knee,Not reported,---,---,Smoothing-sensitive; candidate range 263.2 cycles

@@ -1,0 +1,17 @@
+\begin{table}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\caption{Aggregate transition results for the common 1,071-cycle median representation. Intervals are 95\% bootstrap or posterior intervals as appropriate. S1 did not pass the smoothing-stability gate.}
+\label{tab:changepoint-results}
+\centering
+\begin{tabularx}{\fulllength}{>{\raggedright\arraybackslash}p{0.06\fulllength}>{\raggedright\arraybackslash}p{0.19\fulllength}>{\centering\arraybackslash}p{0.17\fulllength}>{\centering\arraybackslash}p{0.12\fulllength}>{\centering\arraybackslash}p{0.12\fulllength}>{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Model} & \textbf{Transition estimand} & \textbf{Location, cycles} & \textbf{Pre-slope} & \textbf{Post-slope} & \textbf{Status or additional result}\\
+\midrule
+B0 & No transition & --- & 0.003810 & 0.003810 & Constant-slope reference\\
+D1 & Sharp continuous breakpoint & 576.4 [531.5, 628.8] & 0.002620 & 0.005148 & Slope increment 0.002528\\
+A1 & Smooth-transition midpoint & 503.0 [492.3, 512.9] & 0.001343 & 0.005520 & Width 129.2 [112.7, 146.9] cycles; $\Pr(\Delta\beta>0\mid y)=1$\\
+S1 & Maximum-curvature knee & Not reported & --- & --- & Smoothing-sensitive; candidate range 263.2 cycles\\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

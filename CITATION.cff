@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this figure-replication package, cite the associated article."
+title: "Hierarchical Bayesian Changepoint Analysis of Lithium-Ion Battery Degradation under Incomplete Cycle Observations"
+type: software
+version: "[RELEASE VERSION]"
+authors:
+  - family-names: "Jarosz-Kozyro"
+    given-names: "Anna"
+  - family-names: "Bauer"
+    given-names: "Waldemar"
+  - family-names: "Baranowski"
+    given-names: "Jerzy"
+    email: "jb@agh.edu.pl"
+repository-code: "[PUBLIC REPOSITORY URL]"
+doi: "[ARCHIVED RELEASE DOI]"
+preferred-citation:
+  type: article
+  title: "Hierarchical Bayesian Changepoint Analysis of Lithium-Ion Battery Degradation under Incomplete Cycle Observations"
+  authors:
+    - family-names: "Jarosz-Kozyro"
+      given-names: "Anna"
+    - family-names: "Bauer"
+      given-names: "Waldemar"
+    - family-names: "Baranowski"
+      given-names: "Jerzy"
+  doi: "[ARTICLE DOI]"

@@ -1,0 +1,97 @@
+schema_version: 1
+figures:
+  - figure_id: fig_results_cd_trajectories
+    plotting_module: battery_degradation_publication.figures.cd_trajectories
+    accepted_run: m5_h5_1_full_metric_final; m4_bayesian_smooth
+    raw_data_required: false
+    deterministic_preprocessing_required: false
+    frozen_posterior_summary_required: false
+    source_artifacts:
+      - data/frozen_results/h5/regular_eligible_cycles.csv
+      - data/frozen_results/m4/regular_eligible_cycle_aggregate_complete.csv
+  - figure_id: fig_results_transition_definitions
+    plotting_module: battery_degradation_publication.figures.transition_definitions
+    accepted_run: m4_changepoint_definitions
+    raw_data_required: false
+    deterministic_preprocessing_required: false
+    frozen_posterior_summary_required: true
+    source_artifacts:
+      - data/frozen_results/m4/changepoint_method_summary.csv
+      - data/frozen_results/m4/changepoint_method_predictions.csv
+      - data/frozen_results/m4/curvature_sensitivity.csv
+  - figure_id: fig_results_h5_transition_midpoints
+    plotting_module: battery_degradation_publication.figures.h5_transition_midpoints
+    accepted_run: m5_h5_1_full_metric_final
+    raw_data_required: false
+    deterministic_preprocessing_required: false
+    frozen_posterior_summary_required: true
+    source_artifacts:
+      - data/frozen_results/h5/accepted_battery_scientific_summary.csv
+      - data/frozen_results/h5/accepted_population_scientific_summary.csv
+  - figure_id: fig_results_h5_slope_acceleration
+    plotting_module: battery_degradation_publication.figures.h5_slope_acceleration
+    accepted_run: m5_h5_1_full_metric_final
+    raw_data_required: false
+    deterministic_preprocessing_required: false
+    frozen_posterior_summary_required: true
+    source_artifacts:
+      - data/frozen_results/h5/accepted_battery_scientific_summary.csv
+      - data/frozen_results/h5/accepted_population_scientific_summary.csv
+  - figure_id: fig_results_h5_selected_fits
+    plotting_module: battery_degradation_publication.figures.h5_selected_fits
+    accepted_run: m5_h5_1_full_metric_final
+    raw_data_required: false
+    deterministic_preprocessing_required: false
+    frozen_posterior_summary_required: true
+    source_artifacts:
+      - data/frozen_results/ppc/ppc_trajectory_summary.csv
+      - data/frozen_results/h5/accepted_battery_scientific_summary.csv
+  - figure_id: fig_results_h5_ppc
+    plotting_module: battery_degradation_publication.figures.h5_ppc
+    accepted_run: m5_h5_1_full_metric_final
+    raw_data_required: false
+    deterministic_preprocessing_required: false
+    frozen_posterior_summary_required: true
+    source_artifacts:
+      - data/frozen_results/ppc/ppc_overall_summary.json
+      - data/frozen_results/ppc/ppc_per_battery_summary.csv
+      - data/frozen_results/ppc/ppc_binned_residuals.csv
+  - figure_id: fig_results_random_thinning
+    plotting_module: battery_degradation_publication.figures.random_thinning
+    accepted_run: m8_extended_sensitivity_01
+    raw_data_required: false
+    deterministic_preprocessing_required: false
+    frozen_posterior_summary_required: true
+    source_artifacts:
+      - data/frozen_results/m8/stability_vs_full_data_a1.csv
+      - data/frozen_results/m8/stability_vs_full_data_h1_population.csv
+      - data/frozen_results/m8/stability_vs_full_data_h1_per_battery.csv
+      - data/frozen_results/m8/random_thinning_seed_summary.csv
+      - data/frozen_results/m8/computational_diagnostics.csv
+  - figure_id: fig_results_truncation_sensitivity
+    plotting_module: battery_degradation_publication.figures.truncation_sensitivity
+    accepted_run: m8_extended_sensitivity_01
+    raw_data_required: false
+    deterministic_preprocessing_required: false
+    frozen_posterior_summary_required: true
+    source_artifacts:
+      - data/frozen_results/m8/truncation_summary.csv
+      - data/frozen_results/m8/computational_diagnostics.csv
+  - figure_id: fig_results_post_transition_horizon
+    plotting_module: battery_degradation_publication.figures.post_transition_horizon
+    accepted_run: m8_extended_sensitivity_01
+    raw_data_required: false
+    deterministic_preprocessing_required: false
+    frozen_posterior_summary_required: true
+    source_artifacts:
+      - data/frozen_results/m8/post_transition_horizon_analysis.csv
+  - figure_id: fig_results_battery11_truncation
+    plotting_module: battery_degradation_publication.figures.battery11_truncation
+    accepted_run: m5_h5_1_full_metric_final; m8_extended_sensitivity_01
+    raw_data_required: false
+    deterministic_preprocessing_required: false
+    frozen_posterior_summary_required: true
+    source_artifacts:
+      - data/frozen_results/ppc/ppc_trajectory_summary.csv
+      - data/frozen_results/m8/figure_data_h1_truncation_per_battery.csv
+      - data/frozen_results/m8/data_mask_registry.csv

@@ -1,0 +1,27 @@
+\begin{table}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\caption{Sampling configurations and accepted diagnostic results for the final A1 and H5.1 runs. H5.1 ESS values refer to the predefined key-parameter gate; its maximum rank-normalized $\Rhat$ was evaluated over all exported posterior coordinates.}
+\label{tab:computation-gates}
+\centering
+\begin{tabularx}{\fulllength}{>{\raggedright\arraybackslash}p{0.26\fulllength}>{\raggedright\arraybackslash}p{0.20\fulllength}>{\raggedright\arraybackslash}p{0.23\fulllength}>{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Setting or diagnostic} & \textbf{A1} & \textbf{H5.1} & \textbf{Acceptance rule}\\
+\midrule
+Chains / cores & 4 / 4 & 4 / 4 & ---\\
+Tuning iterations per chain & 2,000 & 3,000 & ---\\
+Retained draws per chain & 2,000 & 2,000 & ---\\
+Random seed & 20260614 & 20260615 & Fixed by configuration\\
+Target acceptance & 0.95 & 0.95 & ---\\
+Maximum tree depth & 10 & 10 & No saturated post-warm-up draws\\
+Initialization / metric & \texttt{auto}; PyMC automatic metric & \texttt{jitter+adapt\_full}; dense metric & ---\\
+Maximum rank/default $\Rhat$ & 1.000 & 1.002229 & $\leq1.01$\\
+Minimum bulk ESS & 1,723 & 4,577.67 & $\geq400$\\
+Minimum tail ESS & 2,151 & 4,964.57 & $\geq400$\\
+Divergences & 0 & 0 & 0\\
+Tree-depth saturations & 0 & 0 & 0\\
+Minimum E-BFMI & 0.9593 & 0.9394 & $\geq0.30$\\
+Final gate & Passed & Passed & All applicable criteria\\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

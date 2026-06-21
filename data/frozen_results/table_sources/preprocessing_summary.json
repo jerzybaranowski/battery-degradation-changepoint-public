@@ -1,0 +1,18 @@
+{
+  "source_observations": 15064,
+  "cycle_index_resets": 13,
+  "inferred_battery_records": 14,
+  "candidate_long_duration_rows": 184,
+  "candidate_incomplete_rows": 32,
+  "candidate_flag_overlap": 0,
+  "regular_eligible_rows": 14848,
+  "complete_regular_aggregate_cycles": 1121,
+  "retained_aggregate_cycles": 1071,
+  "excluded_low_support_aggregate_cycles": 50,
+  "long_duration_discharge_max_seconds": 20000.0,
+  "long_duration_charging_max_seconds": 20000.0,
+  "incomplete_discharge_min_seconds": 600.0,
+  "incomplete_charging_min_seconds": 3000.0,
+  "minimum_aggregate_battery_count": 7,
+  "accepted_run": "m4_bayesian_smooth"
+}

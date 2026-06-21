@@ -1,0 +1,56 @@
+{
+  "analysis": {
+    "representation": "per_battery",
+    "response": "C/D",
+    "response_transform": "identity",
+    "subset": "regular_eligible"
+  },
+  "diagnostics": {
+    "diagnostic_status": "passed",
+    "divergence_count": 0,
+    "effective_samples_per_second": 10.399772364404281,
+    "failure_reasons": [],
+    "gate": "production",
+    "maximum_n_steps": 15,
+    "maximum_r_hat": 1.0,
+    "maximum_tree_depth": 4,
+    "median_key_bulk_ess": 13329.0,
+    "median_key_ess_per_second": 31.171253844197135,
+    "median_n_steps": 15.0,
+    "median_step_size": 0.2756560235842263,
+    "minimum_bulk_ess": 4447.0,
+    "minimum_e_bfmi": 0.9394280923682182,
+    "minimum_key_bulk_ess": 4578.0,
+    "minimum_key_ess_per_second": 10.706129499492421,
+    "minimum_key_tail_ess": 4965.0,
+    "minimum_step_size": 0.268381608440814,
+    "minimum_tail_ess": 4545.0,
+    "n_steps_95th_percentile": 15.0,
+    "sampling_warning": false,
+    "tree_depth_saturation_fraction": 0.0,
+    "treedepth_saturation_count": 0,
+    "wall_time_seconds": 427.6055132918991
+  },
+  "hierarchical_parameterization": {
+    "level": "centered",
+    "pre_slope": "centered",
+    "residual_scale": "centered",
+    "slope_change": "centered",
+    "transition_location": "centered"
+  },
+  "hierarchical_stage": "h5_1",
+  "identifiability_status_counts": {
+    "boundary_sensitive": 1,
+    "identified": 13
+  },
+  "interpretation_allowed": true,
+  "nu_near_lower_boundary_note": "Inspect population_transition_summary row 'nu'; values close to 2 indicate the Student-t likelihood remains near its finite-variance lower boundary.",
+  "run_name": "m5_h5_1_full_metric_final",
+  "transition_width_prior": {
+    "log_sd": 0.65,
+    "median_cycles": 100.0,
+    "median_scaled": 0.3108886799372311,
+    "minimum_cycles": 5.0,
+    "minimum_scaled": 0.015544433996861557
+  }
+}

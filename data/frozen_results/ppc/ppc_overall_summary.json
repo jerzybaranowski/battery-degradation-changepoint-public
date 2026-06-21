@@ -1,0 +1,23 @@
+{
+  "battery_count": 14,
+  "coverage_50": 0.589911099137931,
+  "coverage_80": 0.8052936422413793,
+  "coverage_90": 0.8704202586206896,
+  "coverage_95": 0.9096848060344828,
+  "decisions": {
+    "battery_11": "boundary-sensitive battery retained and summarized separately",
+    "common_residual_scale_h5_2": "inconclusive",
+    "mean_structure": "residual structure requires attention",
+    "tail_thickness_h5_3": "sensitivity analysis justified"
+  },
+  "in_sample_posterior_predictive_check": true,
+  "observation_count": 14848,
+  "outside_90_count": 1924,
+  "outside_95_count": 1341,
+  "overall_residual_iqr": 0.07360739880756073,
+  "overall_residual_mad": 0.03662512410374541,
+  "overall_residual_mean": 0.012438809253110939,
+  "overall_residual_median": -0.00035277642435094236,
+  "overall_spearman_abs_residual_cycle": 0.41570329340433254,
+  "overall_spearman_residual_cycle": 0.04529054645746508
+}

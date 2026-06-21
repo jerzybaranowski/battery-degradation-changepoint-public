@@ -1,0 +1,38 @@
+\begin{table}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\caption{Sensitivity of transition localization and extrapolative prediction to battery-wise trajectory truncation.}
+\label{tab:truncation-results}
+\centering
+{
+\setlength{\tabcolsep}{5.2pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\fulllength}{
+>{\centering\arraybackslash}p{1.35cm}
+*{8}{>{\centering\arraybackslash}X}}
+\toprule
+& \multicolumn{3}{c}{\textbf{A1 aggregate}}
+& \multicolumn{5}{c}{\textbf{H5.1 hierarchical}}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-9}
+\textbf{Retained}
+& \shortstack{$\boldsymbol{\Delta\tau}$\\\textbf{(cycles)}}
+& \shortstack{\textbf{90\%}\\\textbf{coverage}}
+& \shortstack{\textbf{95\%}\\\textbf{coverage}}
+& \shortstack{$\boldsymbol{\Delta\tau}$\\\textbf{(cycles)}}
+& \shortstack{\textbf{Rank}\\$\boldsymbol{\rho}$}
+& \textbf{RMSE}
+& \shortstack{\textbf{90\%}\\\textbf{coverage}}
+& \shortstack{\textbf{95\%}\\\textbf{coverage}}\\
+\midrule
+90\% & $-32.3$ & 0.162 & 0.331 & $-89.6$  & 0.486    & 0.693 & 0.280 & 0.352\\
+80\% & $-6.0$  & 0.397 & 0.544 & $-83.5$  & 0.292    & 0.609 & 0.301 & 0.377\\
+75\% & $+27.9$ & 0.339 & 0.466 & $-82.8$  & 0.218    & 0.586 & 0.303 & 0.370\\
+70\% & $+184.4^{\dagger}$ & 0.039 & 0.058 & $-53.0$  & 0.081    & 1.191 & 0.249 & 0.309\\
+60\% & $-87.1$ & 0.072 & 0.123 & $-152.2$ & $-0.464$ & 0.744 & 0.152 & 0.187\\
+\bottomrule
+\end{tabularx}
+}
+\vspace{0.4em}
+
+\noindent\parbox{\fulllength}{\textit{Note:} $\Delta\tau$ is the scenario posterior median minus the corresponding full-data posterior median. Coverage refers to withheld late observations. $^{\dagger}$The A1 fit at 70\% retention contained one post-warm-up tree-depth saturation and is treated as diagnostic rather than as an accepted robustness estimate.}
+\end{adjustwidth}
+\end{table}

@@ -1,0 +1,120 @@
+schema_version: 1
+manuscript_audit:
+  authoritative_main: docs/latex paper/main.tex
+  active_input_count: 8
+  expected_list_discrepancy: none
+  compiled_manuscript_available: false
+tables:
+  - table_id: battery_technology_context
+    caption: Application-oriented context for representative rechargeable battery technologies.
+    manuscript_source_file: docs/latex paper/tables/battery_technology_context.tex
+    generated_latex: tables/generated/battery_technology_context.tex
+    machine_readable: tables/machine_readable/battery_technology_context.csv
+    table_class: curated
+    source_artifacts:
+      - tables/reference/battery_technology_context.tex
+      - tables/reference/references.bib
+    accepted_run: not-applicable
+    generator: battery_degradation_publication.tables.generation.battery_technology_context
+    rounding: not-applicable
+    caveat: Qualitative author synthesis; performance and lifetime depend on chemistry, design, duty cycle, and operating conditions.
+    validation_status: exact-latex-match
+  - table_id: degradation_mechanisms_observability
+    caption: Representative lithium-ion degradation mechanisms, possible macroscopic consequences, and diagnostic observability.
+    manuscript_source_file: docs/latex paper/tables/degradation_mechanisms_observability.tex
+    generated_latex: tables/generated/degradation_mechanisms_observability.tex
+    machine_readable: tables/machine_readable/degradation_mechanisms_observability.csv
+    table_class: curated
+    source_artifacts:
+      - tables/reference/degradation_mechanisms_observability.tex
+      - tables/reference/references.bib
+    accepted_run: not-applicable
+    generator: battery_degradation_publication.tables.generation.degradation_mechanisms_observability
+    rounding: not-applicable
+    caveat: Many-to-many mapping; one signal does not identify a degradation mechanism.
+    validation_status: exact-latex-match
+  - table_id: preprocessing_summary
+    caption: Dataset partition produced by the locked preprocessing pipeline.
+    manuscript_source_file: docs/latex paper/tables/preprocessing_summary.tex
+    generated_latex: tables/generated/preprocessing_summary.tex
+    machine_readable: tables/machine_readable/preprocessing_summary.csv
+    table_class: computed
+    source_artifacts:
+      - data/frozen_results/table_sources/preprocessing_summary.json
+    accepted_run: m4_bayesian_smooth
+    generator: battery_degradation_publication.tables.generation.preprocessing_summary
+    rounding: Counts use integer grouping; shares use two decimal places.
+    caveat: Candidate classes are reversible operational labels, not proof of corruption or protocol identity.
+    validation_status: exact-latex-match
+  - table_id: transition_definitions
+    caption: Operational model roles and transition definitions.
+    manuscript_source_file: docs/latex paper/tables/transition_definitions.tex
+    generated_latex: tables/generated/transition_definitions.tex
+    machine_readable: tables/machine_readable/transition_definitions.csv
+    table_class: curated
+    source_artifacts:
+      - tables/reference/transition_definitions.tex
+    accepted_run: not-applicable
+    generator: battery_degradation_publication.tables.generation.transition_definitions
+    rounding: Observation counts preserve manuscript grouping.
+    caveat: Reported locations are related but non-equivalent estimands.
+    validation_status: exact-latex-match
+  - table_id: computation_gates
+    caption: Sampling configurations and accepted diagnostic results for final A1 and H5.1 runs.
+    manuscript_source_file: docs/latex paper/tables/computation_gates.tex
+    generated_latex: tables/generated/computation_gates.tex
+    machine_readable: tables/machine_readable/computation_gates.csv
+    table_class: computed
+    source_artifacts:
+      - data/frozen_results/table_sources/m4_config_resolved.yaml
+      - data/frozen_results/table_sources/h5_config_resolved.yaml
+      - data/frozen_results/table_sources/m4_bayesian_diagnostics.json
+      - data/frozen_results/table_sources/h5_hierarchical_diagnostics.json
+      - data/frozen_results/table_sources/h5_exact_parameter_diagnostics.csv
+    accepted_run: m4_bayesian_smooth; m5_h5_1_full_metric_final
+    generator: battery_degradation_publication.tables.generation.computation_gates
+    rounding: R-hat uses 3 or 6 decimals; ESS uses 0 or 2 decimals; E-BFMI uses 4 decimals.
+    caveat: H5.1 ESS values use predefined key parameters; maximum rank R-hat uses all exported posterior coordinates.
+    validation_status: exact-latex-match
+  - table_id: changepoint_results
+    caption: Aggregate transition results for the common 1,071-cycle median representation.
+    manuscript_source_file: docs/latex paper/tables/changepoint_results.tex
+    generated_latex: tables/generated/changepoint_results.tex
+    machine_readable: tables/machine_readable/changepoint_results.csv
+    table_class: computed
+    source_artifacts:
+      - data/frozen_results/m4/changepoint_method_summary.csv
+      - data/frozen_results/table_sources/m4_transition_summary.csv
+      - data/frozen_results/table_sources/m4_curvature_stability.json
+    accepted_run: m4_changepoint_definitions; m4_bayesian_smooth
+    generator: battery_degradation_publication.tables.generation.changepoint_results
+    rounding: Locations and intervals use 1 decimal; slopes use 6 decimals.
+    caveat: S1 failed its smoothing-stability gate and has no reported headline location.
+    validation_status: exact-latex-match
+  - table_id: hierarchical_population_results
+    caption: Population-level summaries from the accepted H5.1 posterior.
+    manuscript_source_file: docs/latex paper/tables/hierarchical_population_results.tex
+    generated_latex: tables/generated/hierarchical_population_results.tex
+    machine_readable: tables/machine_readable/hierarchical_population_results.csv
+    table_class: computed
+    source_artifacts:
+      - data/frozen_results/h5/accepted_population_scientific_summary.csv
+    accepted_run: m5_h5_1_full_metric_final
+    generator: battery_degradation_publication.tables.generation.hierarchical_population_results
+    rounding: Cycle quantities use 3 decimals; slopes and residual scale use 6 decimals.
+    caveat: Population transition and slope summaries are draw-wise means of battery-specific quantities.
+    validation_status: exact-latex-match
+  - table_id: truncation_results
+    caption: Sensitivity of transition localization and extrapolative prediction to battery-wise trajectory truncation.
+    manuscript_source_file: docs/latex paper/tables/truncation_results.tex
+    generated_latex: tables/generated/truncation_results.tex
+    machine_readable: tables/machine_readable/truncation_results.csv
+    table_class: computed
+    source_artifacts:
+      - data/frozen_results/m8/truncation_summary.csv
+      - data/frozen_results/m8/computational_diagnostics.csv
+    accepted_run: m8_extended_sensitivity_01
+    generator: battery_degradation_publication.tables.generation.truncation_results
+    rounding: Midpoint shifts use 1 decimal; coverage, rank correlation, and RMSE use 3 decimals.
+    caveat: A1 at 70 percent retention has a dagger and is diagnostic-only because of one tree-depth saturation.
+    validation_status: exact-latex-match

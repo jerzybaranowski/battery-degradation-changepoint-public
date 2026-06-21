@@ -1,0 +1,190 @@
+run_name: m4_bayesian_smooth
+data:
+  raw_path: data/raw/data_new.csv
+  cycle_column: Cycle_Index
+  discharge_time_column: Discharge Time (s)
+  charging_time_column: Charging time (s)
+  value_column: C/D
+  inferred_battery_id_column: Battery_ID
+  expected_battery_count: 14
+  validate_ratio_identity: true
+  ratio_tolerance: 1.0e-12
+preprocessing:
+  long_duration:
+    enabled: true
+    discharge_max_seconds: 20000.0
+    charging_max_seconds: 20000.0
+    criterion: any
+    class_column: cycle_class
+    preserve_all_rows: true
+  incomplete_cycle:
+    enabled: true
+    discharge_min_seconds: 600.0
+    charging_min_seconds: 3000.0
+    criterion: any
+    preserve_all_rows: true
+analysis:
+  subset: regular_eligible
+  representation: cycle_aggregate
+  response: C/D
+  response_transform: identity
+aggregation:
+  method: median
+  lower_quantile: 0.25
+  upper_quantile: 0.75
+  minimum_battery_count: 7
+model:
+  likelihood: student_t
+  degradation_direction: increase
+  draws: 2000
+  tune: 2000
+  chains: 4
+  cores: 4
+  target_accept: 0.95
+  random_seed: 20260614
+  chain_random_seeds: null
+  nuts_init: auto
+  transition_width_prior_median_scaled: 0.08
+  transition_width_prior_log_sd: 0.5
+  minimum_segment_fraction: 0.1
+  prior_predictive_draws: 500
+  posterior_predictive_draws: 500
+  max_treedepth: 10
+  tau_prior_location_cycle: null
+  tau_prior_scale_unconstrained: 1.0
+  hierarchy_scale_prior_sd: 0.75
+  residual_hierarchy_scale_prior_sd: 0.75
+  identifiability_tau_width_fraction_threshold: 0.75
+  identifiability_boundary_mass_fraction: 0.05
+  identifiability_boundary_probability_threshold: 0.2
+  identifiability_delta_probability_threshold: 0.9
+  hierarchical_stage: h5_3
+  hierarchical_parameterization:
+    level: centered
+    pre_slope: centered
+    slope_change: centered
+    transition_location: centered
+    residual_scale: centered
+  hierarchy_priors:
+    level_sd: 0.5
+    pre_slope_sd: 0.3
+    slope_change_sd: 0.4
+    transition_location_sd_scaled: 0.3
+    log_residual_scale_sd: 0.35
+  transition_width_prior:
+    median_cycles: 100.0
+    log_sd: 0.65
+    minimum_cycles: 5.0
+  fixed_student_t_nu: 4.0
+  minimum_observations_per_battery: 100
+diagnostics:
+  gate: production
+  smoke:
+    maximum_r_hat: 1.05
+    minimum_key_bulk_ess: 50.0
+    maximum_divergences: 0
+    maximum_treedepth_saturation_fraction: 0.01
+  production:
+    maximum_r_hat: 1.01
+    minimum_bulk_ess: 400.0
+    minimum_tail_ess: 400.0
+    maximum_divergences: 0
+    maximum_treedepth_saturation_count: 0
+    minimum_e_bfmi: 0.3
+  maximum_r_hat: 1.01
+  minimum_bulk_ess: 400.0
+  minimum_tail_ess: 400.0
+  maximum_divergences: 0
+  minimum_e_bfmi: 0.3
+  maximum_treedepth_saturation_count: 0
+changepoint_methods:
+  linear:
+    enabled: true
+  broken_stick:
+    enabled: true
+    minimum_segment_fraction: 0.1
+    minimum_segment_observations: null
+    bootstrap:
+      enabled: true
+      method: moving_block
+      replicates: 500
+      block_length: null
+      seed: 20260614
+      interval_level: 0.95
+  bayesian_smooth:
+    enabled: true
+    artifact_path: null
+    metadata_path: null
+    transition_summary_path: null
+  curvature:
+    enabled: true
+    smoothing_parameter: null
+    boundary_exclusion_fraction: 0.05
+    evaluation_grid_size: 400
+    smoothing_sensitivity:
+      enabled: true
+      parameter_values:
+      - 1.0
+      - 3.0
+      - 10.0
+      - 30.0
+      - 100.0
+      maximum_location_range_cycles: 100.0
+      maximum_location_sd_cycles: null
+      require_same_local_region: false
+    bootstrap:
+      enabled: false
+      method: moving_block
+      replicates: 0
+      block_length: null
+      seed: 20260614
+      interval_level: 0.95
+outputs:
+  run_directory: results/runs/m4_bayesian_smooth
+  all_cycles_flagged_path: results/runs/m4_bayesian_smooth/data/all_cycles_flagged.csv
+  regular_cycles_path: results/runs/m4_bayesian_smooth/data/regular_cycles.csv
+  regular_eligible_cycles_path: results/runs/m4_bayesian_smooth/data/regular_eligible_cycles.csv
+  candidate_incomplete_cycles_path: results/runs/m4_bayesian_smooth/data/candidate_incomplete_cycles.csv
+  long_duration_cycles_path: results/runs/m4_bayesian_smooth/data/long_duration_cycles.csv
+  aggregate_path: results/runs/m4_bayesian_smooth/data/regular_eligible_cycle_aggregate.csv
+  regular_eligible_cycle_aggregate_path: results/runs/m4_bayesian_smooth/data/regular_eligible_cycle_aggregate.csv
+  complete_regular_eligible_cycle_aggregate_path: results/runs/m4_bayesian_smooth/data/regular_eligible_cycle_aggregate_complete.csv
+  duration_screen_only_cycle_aggregate_path: results/runs/m4_bayesian_smooth/data/duration_screen_only_cycle_aggregate.csv
+  candidate_incomplete_cycle_aggregate_path: results/runs/m4_bayesian_smooth/data/candidate_incomplete_cycle_aggregate.csv
+  regular_cycle_aggregate_path: results/runs/m4_bayesian_smooth/data/regular_cycle_aggregate.csv
+  long_duration_cycle_aggregate_path: results/runs/m4_bayesian_smooth/data/long_duration_cycle_aggregate.csv
+  data_report_path: results/runs/m4_bayesian_smooth/metadata/preprocessing_report.json
+  inference_data_path: results/runs/m4_bayesian_smooth/inference/posterior.nc
+  prior_predictive_path: results/runs/m4_bayesian_smooth/inference/prior_predictive.nc
+  posterior_predictive_path: results/runs/m4_bayesian_smooth/inference/posterior_predictive.nc
+  fit_metadata_path: results/runs/m4_bayesian_smooth/metadata/fit.json
+  resolved_config_path: results/runs/m4_bayesian_smooth/config_resolved.yaml
+  diagnostic_summary_path: results/runs/m4_bayesian_smooth/tables/diagnostic_summary.csv
+  bayesian_diagnostics_path: results/runs/m4_bayesian_smooth/metadata/bayesian_diagnostics.json
+  scaling_metadata_path: results/runs/m4_bayesian_smooth/metadata/scaling_metadata.json
+  model_metadata_path: results/runs/m4_bayesian_smooth/metadata/model_metadata.json
+  transition_summary_table_path: results/runs/m4_bayesian_smooth/tables/transition_summary.csv
+  posterior_predictions_path: results/runs/m4_bayesian_smooth/tables/posterior_predictions.csv
+  posterior_residuals_path: results/runs/m4_bayesian_smooth/tables/posterior_residuals.csv
+  posterior_figure_draws_path: results/runs/m4_bayesian_smooth/tables/posterior_figure_draws.csv
+  parameter_summary_path: results/runs/m4_bayesian_smooth/tables/posterior_parameter_summary.csv
+  changepoint_summary_path: results/runs/m4_bayesian_smooth/tables/changepoint_summary.json
+  prediction_grid_path: results/runs/m4_bayesian_smooth/tables/posterior_predictions.csv
+  changepoint_method_summary_path: results/runs/m4_bayesian_smooth/tables/changepoint_method_summary.csv
+  changepoint_method_predictions_path: results/runs/m4_bayesian_smooth/tables/changepoint_method_predictions.csv
+  changepoint_method_details_path: results/runs/m4_bayesian_smooth/metadata/changepoint_method_details.json
+  curvature_sensitivity_path: results/runs/m4_bayesian_smooth/tables/curvature_sensitivity.csv
+  curvature_stability_path: results/runs/m4_bayesian_smooth/metadata/curvature_stability.json
+  hierarchical_model_input_path: results/runs/m4_bayesian_smooth/data/hierarchical_model_input.csv
+  per_battery_coverage_path: results/runs/m4_bayesian_smooth/data/per_battery_coverage.csv
+  data_coverage_report_path: results/runs/m4_bayesian_smooth/metadata/data_coverage_report.json
+  population_transition_summary_path: results/runs/m4_bayesian_smooth/tables/population_transition_summary.csv
+  battery_transition_summary_path: results/runs/m4_bayesian_smooth/tables/battery_transition_summary.csv
+  battery_parameter_summary_path: results/runs/m4_bayesian_smooth/tables/battery_parameter_summary.csv
+  population_parameter_summary_path: results/runs/m4_bayesian_smooth/tables/population_parameter_summary.csv
+  posterior_predictions_by_battery_path: results/runs/m4_bayesian_smooth/tables/posterior_predictions_by_battery.csv
+  posterior_population_predictions_path: results/runs/m4_bayesian_smooth/tables/posterior_population_predictions.csv
+  posterior_residuals_by_battery_path: results/runs/m4_bayesian_smooth/tables/posterior_residuals_by_battery.csv
+  aggregate_vs_hierarchical_summary_path: results/runs/m4_bayesian_smooth/tables/aggregate_vs_hierarchical_summary.csv
+  hierarchical_diagnostics_path: results/runs/m4_bayesian_smooth/metadata/hierarchical_diagnostics.json
+  identifiability_diagnostics_path: results/runs/m4_bayesian_smooth/metadata/identifiability_diagnostics.json

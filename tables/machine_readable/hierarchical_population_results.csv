@@ -1,0 +1,8 @@
+Quantity,Posterior median,95% HDI
+"Population transition midpoint, cycles",553.872,"[547.128, 560.886]"
+"Between-battery midpoint SD, cycles",141.973,"[130.079, 154.577]"
+"Shared transition width, cycles",183.742,"[172.397, 195.682]"
+Population pre-transition slope,0.000947,"[0.000829, 0.001058]"
+Population post-transition slope,0.006516,"[0.006367, 0.006667]"
+Population slope increment,0.005569,"[0.005327, 0.005829]"
+"Shared residual scale, C/D",0.064493,"[0.063415, 0.065586]"

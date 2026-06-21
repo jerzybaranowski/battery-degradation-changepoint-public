@@ -1,0 +1,28 @@
+{
+  "diagnostic_status": "smoothing_sensitive",
+  "failed_fit_count": 0,
+  "knee_cycle_range": 263.2064128256512,
+  "maximum_knee_cycle": 1053.0,
+  "mean_knee_cycle": 885.9038076152304,
+  "median_knee_cycle": 789.7935871743488,
+  "minimum_knee_cycle": 789.7935871743488,
+  "parameter_values": [
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0
+  ],
+  "primary_knee_cycle": 789.7935871743488,
+  "primary_smoothing_parameter": 10.0,
+  "range_passed": false,
+  "same_local_region_passed": true,
+  "stability_thresholds": {
+    "maximum_location_range_cycles": 100.0,
+    "maximum_location_sd_cycles": null,
+    "require_same_local_region": false
+  },
+  "standard_deviation_knee_cycle": 118.60055428852034,
+  "standard_deviation_passed": true,
+  "successful_fit_count": 5
+}

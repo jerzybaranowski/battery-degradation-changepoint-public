@@ -1,0 +1,15 @@
+Setting or diagnostic,A1,H5.1,Acceptance rule
+Chains / cores,4 / 4,4 / 4,---
+Tuning iterations per chain,"2,000","3,000",---
+Retained draws per chain,"2,000","2,000",---
+Random seed,20260614,20260615,Fixed by configuration
+Target acceptance,0.95,0.95,---
+Maximum tree depth,10,10,No saturated post-warm-up draws
+Initialization / metric,auto; PyMC automatic metric,jitter+adapt_full; dense metric,---
+Maximum rank/default Rhat,1.000,1.002229,<=1.01
+Minimum bulk ESS,"1,723","4,577.67",>=400
+Minimum tail ESS,"2,151","4,964.57",>=400
+Divergences,0,0,0
+Tree-depth saturations,0,0,0
+Minimum E-BFMI,0.9593,0.9394,>=0.30
+Final gate,Passed,Passed,All applicable criteria

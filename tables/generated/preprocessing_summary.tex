@@ -1,0 +1,23 @@
+\begin{table}[H]
+\begin{adjustwidth}{-\extralength}{0cm}
+\caption{Dataset partition produced by the locked preprocessing pipeline. Candidate classifications are reversible operational labels and do not assert measurement corruption or exact protocol identity.}
+\label{tab:preprocessing-summary}
+\centering
+\begin{tabularx}{\fulllength}{>{\raggedright\arraybackslash}Xrr>{\raggedright\arraybackslash}p{0.34\fulllength}}
+\toprule
+\textbf{Quantity} & \textbf{Count} & \textbf{Share} & \textbf{Definition}\\
+\midrule
+Source observations & 15,064 & 100.00\% & All rows in the distributed file\\
+Cycle-index resets & 13 & --- & Strict decreases in preserved source order\\
+Inferred battery records & 14 & --- & One plus the cumulative reset count\\
+Candidate long-duration rows & 184 & 1.22\% & Either duration $>20{,}000$~s\\
+Candidate incomplete rows & 32 & 0.21\% & Discharge $<600$~s or charge $<3{,}000$~s\\
+Overlap of candidate flags & 0 & 0.00\% & Rows satisfying both candidate rules\\
+Regular-eligible rows & 14,848 & 98.57\% & Neither candidate flag\\
+Complete regular aggregate & 1,121 cycles & --- & Median \CD{} at every represented cycle\\
+Retained aggregate & 1,071 cycles & --- & At least seven contributing batteries\\
+Excluded low-support aggregate & 50 cycles & --- & Fewer than seven contributing batteries\\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

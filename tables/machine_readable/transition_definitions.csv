@@ -1,0 +1,6 @@
+Code,Observation structure,Model role and estimand,Uncertainty or stability assessment,entry_provenance,citation_keys
+B0,"1,071 cycle medians",Constant-slope no-transition reference,No changepoint parameter,author-defined methodological terminology; no table-local citation keys,
+D1,"1,071 cycle medians",Sharp breakpoint joining two continuous linear regimes,Moving-block residual bootstrap,author-defined methodological terminology; no table-local citation keys,
+S1,"1,071 cycle medians",Interior cycle of maximum smoothing-spline curvature,Smoothing-ladder stability gate,author-defined methodological terminology; no table-local citation keys,
+A1,"1,071 cycle medians",Midpoint of an aggregate gradual slope transition,Bayesian posterior interval,author-defined methodological terminology; no table-local citation keys,
+H5.1,"14,848 battery--cycle rows",Battery-specific gradual-transition midpoints and draw-wise population summaries,Hierarchical Bayesian posterior intervals and boundary diagnostics,author-defined methodological terminology; no table-local citation keys,
