@@ -115,11 +115,28 @@ Validation checks frozen-artifact checksums, required PDF/PNG outputs, physical
 dimensions, PNG resolution, prohibited files, NetCDF exclusion, file-size
 limits, symbolic links, and machine-specific paths.
 
-## Citation, licence, and contact
+## Citation
 
-Complete the remaining placeholders in `CITATION.cff` after the article DOI,
-repository URL, archive DOI, and release version are known. Correspondence:
-Jerzy Baranowski, `jb@agh.edu.pl`.
+If you use this replication package, cite the associated preprint:
 
-No applicable software licence was present in the source repository. See
-`LICENSE_PENDING.md`; a licence must be selected before public release.
+Anna Jarosz-Kozyro, Waldemar Bauer, and Jerzy Baranowski, *Hierarchical
+Bayesian Changepoint Analysis of Lithium-Ion Battery Degradation under
+Incomplete Cycle Observations*, Preprints.org, 2025.
+[https://doi.org/10.20944/preprints202509.2395.v2](https://doi.org/10.20944/preprints202509.2395.v2)
+
+Machine-readable citation metadata are provided in `CITATION.cff`. Its archive
+DOI and release-version placeholders will be completed when a versioned archive
+is created.
+
+## Licence and contact
+
+The software, scripts, tests, and configuration files are licensed under the
+MIT License; see `LICENSE`. Except where otherwise noted, original
+documentation, figures, and tables are licensed under CC BY 4.0; see
+`LICENSE-CONTENT.md`.
+
+The content licence does not cover third-party material or
+`data/frozen_results/`. The raw source dataset is not redistributed and remains
+subject to its original terms; see `data/README.md`.
+
+Correspondence: Jerzy Baranowski, `jb@agh.edu.pl`.

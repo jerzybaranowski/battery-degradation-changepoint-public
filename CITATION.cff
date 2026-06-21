@@ -3,6 +3,7 @@ message: "If you use this figure-replication package, cite the associated articl
 title: "Hierarchical Bayesian Changepoint Analysis of Lithium-Ion Battery Degradation under Incomplete Cycle Observations"
 type: software
 version: "[RELEASE VERSION]"
+license: MIT
 authors:
   - family-names: "Jarosz-Kozyro"
     given-names: "Anna"
@@ -11,7 +12,7 @@ authors:
   - family-names: "Baranowski"
     given-names: "Jerzy"
     email: "jb@agh.edu.pl"
-repository-code: "[PUBLIC REPOSITORY URL]"
+repository-code: "https://github.com/jerzybaranowski/battery-degradation-changepoint-public"
 doi: "[ARCHIVED RELEASE DOI]"
 preferred-citation:
   type: article
@@ -23,4 +24,4 @@ preferred-citation:
       given-names: "Waldemar"
     - family-names: "Baranowski"
       given-names: "Jerzy"
-  doi: "[ARTICLE DOI]"
+  doi: "10.20944/preprints202509.2395.v2"
